@@ -34,6 +34,7 @@ Tải dự án về, giải nén nếu cần và mở `index.html` bằng trình
 ├── index.html
 ├── README.md
 ├── AI_USAGE.md
+├── Bao-cao-Buoi-2-Le-Viet-Chi-Hung.docx
 ├── HUONG_DAN.md
 ├── NGUON_ANH.md
 ├── css/
@@ -47,7 +48,12 @@ Tải dự án về, giải nén nếu cần và mở `index.html` bằng trình
     ├── before-1366.png
     ├── after-1366.png
     ├── responsive-768.png
-    └── responsive-390.png
+    ├── responsive-390.png
+    ├── evidence-step-2.png
+    ├── evidence-step-3.png
+    ├── evidence-step-4.png
+    ├── evidence-step-5.png
+    └── evidence-step-6.png
 ```
 
 ## 6. Cải tiến đã thực hiện
@@ -76,9 +82,10 @@ Buổi 2 tiếp tục dùng trang kết quả tìm kiếm từ Buổi 1 để ô
 | --- | --- |
 | ![Trước khi đồng bộ focus với hover](screenshots/before-1366.png) | ![Sau khi đồng bộ focus với hover](screenshots/after-1366.png) |
 
-Ảnh kiểm tra responsive ở [768 px](screenshots/responsive-768.png) và [390 px](screenshots/responsive-390.png). Cả hai kích thước đều hiển thị đủ bốn ảnh và không tràn ngang.
+Ảnh kiểm tra responsive ở [768 px](screenshots/responsive-768.png) và [390 px](screenshots/responsive-390.png). Cả hai kích thước đều hiển thị đủ bốn ảnh và không tràn ngang. Ảnh trích mã minh chứng các Bước 2–6 nằm trong cùng thư mục `screenshots/`.
 
 ## 10. Repository và bản chạy
 
-- Repository: [ihcgnuh/ecommerce-ui-improvement](https://github.com/ihcgnuh/ecommerce-ui-improvement).
-- Bản demo trực tuyến: chưa có đường dẫn được cung cấp; mở `index.html` để chạy tại máy.
+- Repository: [hungle-31241027755/ecommerce-ui-improvement](https://github.com/hungle-31241027755/ecommerce-ui-improvement).
+- Bản demo trực tuyến: [GitHub Pages](https://hungle-31241027755.github.io/ecommerce-ui-improvement/).
+- Báo cáo Buổi 2: [Bao-cao-Buoi-2-Le-Viet-Chi-Hung.docx](Bao-cao-Buoi-2-Le-Viet-Chi-Hung.docx).
