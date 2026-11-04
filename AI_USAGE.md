@@ -51,3 +51,19 @@ Loại bỏ nhận xét “banner lớn nên bất tiện” và “phải cuộ
 | `@media` | Đổi bố cục tại màn hình hẹp. |
 | `object-fit: contain` | Giữ tỷ lệ và hiển thị trọn ảnh. |
 | `:focus-visible` | Nhận biết vị trí liên kết khi dùng bàn phím. |
+
+## 7. Hỗ trợ Buổi 2
+
+### Prompt rà soát
+
+> Hãy rà soát mã HTML/CSS hiện có của trang tìm kiếm Cocoon theo yêu cầu Buổi 2. Chỉ ra cấu trúc HTML5, selector, Box Model, Flexbox, Grid và trạng thái hover/focus đã có. Đề xuất một điều chỉnh nhỏ có thể kiểm tra trực tiếp trên giao diện, không tạo lại website và không bịa lỗi. Giải thích rõ cách kiểm tra bằng chuột và bàn phím.
+
+### Kết quả và điều chỉnh
+
+Mã Buổi 1 đã có phần tử ngữ nghĩa, CSS riêng, Grid, Flexbox và viền `:focus-visible`. Điều chỉnh Buổi 2 dùng chung màu nền đậm và màu chữ sáng cho trạng thái hover bằng chuột và focus bằng bàn phím trên `.product-action`; riêng focus giữ viền nhận biết và rút `outline-offset` còn 3 px. Thay đổi này tạo phản hồi nhất quán cho cùng một hành động.
+
+Đã kiểm tra bằng Tab đến liên kết sản phẩm đầu tiên; viền focus hiển thị rõ. Nhấn Enter mở đúng trang nước tẩy trang bí đao 500 ml trên Cocoon. Mã vẫn dùng trạng thái tìm kiếm cố định, không thêm JavaScript hoặc giả lập chức năng tìm kiếm.
+
+### Phạm vi ghi nhận
+
+Phần mã và nội dung Buổi 2 trong phiên này được cập nhật với sự hỗ trợ của Codex. Người học cần mở lại trang trong trình duyệt, tự xem trạng thái focus và có thể thay đổi một giá trị CSS để luyện thao tác trực tiếp trước khi nộp.

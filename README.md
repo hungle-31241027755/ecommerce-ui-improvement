@@ -58,3 +58,7 @@ Máy tính từ 900 px xếp ảnh, thông tin, giá và liên kết trên cùng
 Tôi lựa chọn website, đối chiếu nhận xét với giao diện thực tế, cung cấp ảnh menu và yêu cầu loại bỏ các kết luận chưa có cơ sở về banner hoặc việc cuộn trang. Tôi chọn hướng bổ sung ảnh và giá trong tìm kiếm, xem xét bản minh họa và quyết định phương án cuối.
 
 AI hỗ trợ hệ thống hóa phân tích, đề xuất bố cục, tạo và sửa mã HTML/CSS, kiểm tra hiển thị và chuẩn bị tài liệu. Quá trình chọn lọc kết quả, phạm vi kiểm tra và các thành phần mã được ghi ngắn gọn tại [AI_USAGE.md](AI_USAGE.md).
+
+## 8. Bài tập Buổi 2
+
+Buổi 2 tiếp tục dùng trang kết quả tìm kiếm từ Buổi 1 để ôn HTML5 có ngữ nghĩa, CSS selector, Box Model, Flexbox, CSS Grid và trạng thái tương tác. Bản cập nhật đồng bộ trạng thái hover và focus bàn phím trên liên kết “Xem chi tiết”; phần giải thích, câu trả lời kiến thức và ghi nhận kiểm thử nằm trong [báo cáo Buổi 2](BAO_CAO_BUOI_2.md).
