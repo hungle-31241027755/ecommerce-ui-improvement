@@ -54,16 +54,18 @@ Loại bỏ nhận xét “banner lớn nên bất tiện” và “phải cuộ
 
 ## 7. Hỗ trợ Buổi 2
 
-### Prompt rà soát
+### Prompt rà soát và hoàn thiện
 
 > Hãy rà soát mã HTML/CSS hiện có của trang tìm kiếm Cocoon theo yêu cầu Buổi 2. Chỉ ra cấu trúc HTML5, selector, Box Model, Flexbox, Grid và trạng thái hover/focus đã có. Đề xuất một điều chỉnh nhỏ có thể kiểm tra trực tiếp trên giao diện, không tạo lại website và không bịa lỗi. Giải thích rõ cách kiểm tra bằng chuột và bàn phím.
 
 ### Kết quả và điều chỉnh
 
-Mã Buổi 1 đã có phần tử ngữ nghĩa, CSS riêng, Grid, Flexbox và viền `:focus-visible`. Điều chỉnh Buổi 2 dùng chung màu nền đậm và màu chữ sáng cho trạng thái hover bằng chuột và focus bằng bàn phím trên `.product-action`; riêng focus giữ viền nhận biết và rút `outline-offset` còn 3 px. Thay đổi này tạo phản hồi nhất quán cho cùng một hành động.
+Mã Buổi 1 đã có phần tử ngữ nghĩa, CSS riêng, Grid, Flexbox và viền `:focus-visible`. Buổi 2 dùng chung nền xanh đậm, viền xanh và chữ trắng cho `:hover` và `:focus-visible` trên `.product-action`; focus giữ viền nhận biết với `outline-offset: 3px`. Trong lần rà soát hoàn thiện, Codex bổ sung `border-color 150ms` vào `transition` để viền chuyển màu cùng nền và chữ.
 
-Đã kiểm tra bằng Tab đến liên kết sản phẩm đầu tiên; viền focus hiển thị rõ. Nhấn Enter mở đúng trang nước tẩy trang bí đao 500 ml trên Cocoon. Mã vẫn dùng trạng thái tìm kiếm cố định, không thêm JavaScript hoặc giả lập chức năng tìm kiếm.
+Codex kiểm tra trực tiếp trạng thái hover bằng chuột và focus bằng Tab; cả hai đều hiện nền/viền xanh và chữ trắng. Nhấn Enter mở trang chi tiết nước tẩy trang bí đao 500 ml trên Cocoon. Mã vẫn dùng từ khóa cố định, không thêm JavaScript hoặc giả lập tìm kiếm động.
 
-### Phạm vi ghi nhận
+### Kiểm tra viewport và ảnh minh chứng
 
-Phần mã và nội dung Buổi 2 trong phiên này được cập nhật với sự hỗ trợ của Codex. Người học cần mở lại trang trong trình duyệt, tự xem trạng thái focus và có thể thay đổi một giá trị CSS để luyện thao tác trực tiếp trước khi nộp.
+Chrome được đặt ở các viewport CSS rộng 1366 px, 768 px và 390 px. Cả ba đều tải đủ 4 ảnh; `document.documentElement.scrollWidth` lần lượt bằng đúng chiều rộng viewport. Cặp ảnh trước/sau cùng kích thước 1366 × 1100 px, liên kết đầu tiên ở trạng thái focus; ảnh responsive lưu riêng trong `screenshots/`.
+
+Để minh bạch việc dùng AI: Codex trực tiếp sửa CSS, cập nhật báo cáo và README, chạy các bước kiểm tra, rồi chụp ảnh theo yêu cầu của người học. Người học nên xem lại thay đổi trong `css/style.css` và `BAO_CAO_BUOI_2.md` để có thể giải thích khi nộp hoặc được hỏi trực tiếp.

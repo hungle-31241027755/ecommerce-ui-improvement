@@ -12,15 +12,15 @@ Khu vực được rà soát là liên kết “Xem chi tiết” của từng k
 
 | Quan sát | Phân loại | Hướng xử lý |
 | --- | --- | --- |
-| Trang có bốn sản phẩm cố định cho từ khóa “bí đao”; ô tìm kiếm ở trạng thái chỉ đọc. | Giới hạn được chủ ý của bản HTML/CSS, không phải lỗi. | Giữ ghi chú “4 kết quả cố định”; chức năng tìm kiếm động thuộc phạm vi JavaScript ở Buổi 3. |
-| Mỗi sản phẩm có ảnh, tên, dung tích, giá và liên kết. Ảnh có `alt`; liên kết có tên truy cập rõ ràng. | Đã có và phù hợp với nội dung. | Giữ cấu trúc hiện tại. |
-| Hover làm nút đổi sang nền xanh đậm; focus bàn phím trước khi cập nhật chỉ dùng viền chung của trang. | Cơ hội đồng bộ hai trạng thái của cùng một hành động. | Dùng chung màu hover cho `:hover` và `:focus-visible`, giữ viền focus để nhận biết bàn phím. |
+| Ô từ khóa chỉ đọc và bốn kết quả được cố định. | Giới hạn có chủ ý của bản HTML/CSS, không phải lỗi hiển thị; người dùng cần được biết đây là minh họa. | Giữ chú thích “4 kết quả cố định”; chức năng tìm kiếm động thuộc Buổi 3. |
+| Trước khi sửa, hover đổi nền nút nhưng focus bằng bàn phím chỉ có viền chung của trang. | Hai trạng thái của cùng liên kết có phản hồi khác nhau; đây là cơ hội cải thiện, không làm hỏng thao tác. | Cho `:focus-visible` dùng màu nền như hover và giữ viền nhận biết focus. |
+| Trước khi sửa, nền và màu chữ có chuyển đổi 150 ms nhưng màu viền đổi ngay. | Chi tiết chuyển động nhỏ chưa đồng bộ với hai thuộc tính còn lại. | Thêm `border-color` vào danh sách thuộc tính chuyển đổi. |
 
 ## 3. Thay đổi đã thực hiện
 
-Trong `css/style.css`, quy tắc `.product-action:hover` được mở rộng để áp dụng cùng màu nền xanh đậm, viền xanh và chữ trắng cho `.product-action:focus-visible`. Trạng thái focus đặt `outline-offset: 3px` để viền nằm sát hơn quanh liên kết mà vẫn tách khỏi nút.
+Trong `css/style.css`, `.product-action:hover` và `.product-action:focus-visible` dùng chung nền xanh đậm, viền xanh và chữ trắng. Viền focus vẫn hiện rõ với `outline-offset: 3px`. Quy tắc `transition` cũng thêm `border-color 150ms` để viền chuyển màu cùng nền và chữ.
 
-Đây là cải tiến phản hồi trực quan, không phải sửa lỗi hỏng chức năng. Khi dùng chuột, nút đổi nền; khi dùng Tab, nút có cùng nền và thêm viền focus; khi dùng Enter, liên kết mở trang chi tiết trong thẻ mới.
+Đây là cải tiến phản hồi trực quan, không phải sửa lỗi hỏng chức năng. Khi dùng chuột, nút đổi nền; khi dùng Tab, nút có cùng nền và thêm viền focus; khi dùng Enter, liên kết mở trang chi tiết trong thẻ mới. Codex đã sửa mã theo yêu cầu của người học; phần thay đổi và kiểm tra được ghi trong `AI_USAGE.md`.
 
 Mã có element selector như `img` và `h3`, class selector như `.product-action`, và descendant selector như `.search-field svg`. Quy tắc `* { box-sizing: border-box; }` giúp kích thước phần tử tính cả viền và padding trong chiều rộng/chiều cao đã khai báo.
 
@@ -28,15 +28,16 @@ Mã có element selector như `img` và `h3`, class selector như `.product-acti
 
 | Nội dung kiểm tra | Kết quả | Ghi chú |
 | --- | --- | --- |
-| Trang HTML mở được | Đạt | Mở trang từ máy chủ cục bộ trong trình duyệt. |
-| CSS được áp dụng | Đạt | Kiểu chữ, màu, bố cục và nút hiển thị theo `css/style.css`. |
-| Hình ảnh sản phẩm | Đạt | Bốn ảnh hiển thị trong trang đã mở. |
-| Liên kết sản phẩm đầu tiên | Đạt | Tab đến liên kết đầu tiên, nhấn Enter; trang đích có tiêu đề “Nước tẩy trang bí đao 500ml” và giá 299.000 đ. |
-| Trạng thái bàn phím | Đạt | Viền focus hiển thị quanh liên kết sản phẩm đầu tiên. |
-| Tràn ngang ở khung đã mở | Không ghi nhận | Quan sát trang ở khung trình duyệt hiện có; chưa chạy lại toàn bộ kích thước 1366 px, 768 px và 390 px trong lần cập nhật này. |
-| Tìm kiếm động | Không áp dụng | Trang ghi rõ đây là bốn kết quả cố định; không giả lập chức năng chưa có. |
+| Trang HTML mở được | Đạt | Mở từ máy chủ cục bộ trong Chrome. |
+| CSS được áp dụng | Đạt | Kiểu chữ, màu, bố cục và trạng thái liên kết lấy từ `css/style.css`. |
+| Hình ảnh sản phẩm | Đạt | 4/4 ảnh tải hoàn tất ở cả 1366 px, 768 px và 390 px. |
+| Liên kết sản phẩm đầu tiên | Đạt | Dùng bàn phím mở trang “Nước tẩy trang bí đao 500ml”; trang đích đã được xác nhận ở lần kiểm tra trước. |
+| Hover bằng chuột | Đạt | Di chuyển con trỏ lên liên kết làm nền và viền chuyển xanh, chữ chuyển trắng. |
+| Focus bằng bàn phím | Đạt | Dùng Tab; liên kết có nền xanh cùng viền focus nhìn thấy rõ. |
+| Bố cục và tràn ngang | Đạt | Viewport 1366, 768 và 390 px; `scrollWidth` lần lượt bằng đúng chiều rộng viewport, không có tràn ngang. |
+| Tìm kiếm động | Chưa có, theo phạm vi | Trang ghi rõ đây là bốn kết quả cố định; không giả lập chức năng tìm kiếm của Buổi 3. |
 
-Buổi 1 đã ghi nhận kiểm tra responsive ở 1280 × 900, 768 × 1024, 375 × 812 và 320 × 740. Lần cập nhật Buổi 2 chỉ đổi trạng thái hover/focus của liên kết; các quy tắc breakpoint không thay đổi. Cần chụp một cặp ảnh trước/sau khi người học mở trang ở trình duyệt để bổ sung minh chứng trực quan theo yêu cầu nộp bài.
+Ảnh trước/sau ở `screenshots/before-1366.png` và `screenshots/after-1366.png` cùng kích thước 1366 × 1100 px, tập trung vào liên kết sản phẩm đầu tiên ở trạng thái focus. Hai ảnh responsive sau khi hoàn thiện ở `screenshots/responsive-768.png` và `screenshots/responsive-390.png`. Ảnh được kết xuất bằng Chrome; kiểm tra hover và Tab cũng được thực hiện trên trang đang mở.
 
 ## 5. Giải thích kỹ thuật trong mã
 
@@ -46,7 +47,7 @@ Trang dùng `header` cho đầu trang, `main` cho nội dung chính, `section` �
 
 ### Câu 2. Khác nhau giữa margin và padding
 
-`margin` tạo khoảng cách bên ngoài phần tử. Ví dụ `.search-panel { margin-bottom: 16px; }` tạo khoảng cách giữa khung tìm kiếm và phần kết quả. `padding` tạo khoảng trống bên trong đường viền. Ví dụ `.search-result { padding: 15px 22px; }` tạo khoảng cách giữa nội dung từng hàng và viền danh sách; phần đệm giúp ảnh và chữ không sát mép.
+`margin` tạo khoảng cách bên ngoài phần tử. Trong thẻ sản phẩm, `.product-category { margin-bottom: 5px; }` tạo khoảng cách giữa nhãn danh mục và tên sản phẩm. `padding` tạo khoảng trống bên trong đường viền; `.search-result { padding: 15px 22px; }` giúp ảnh và chữ không sát mép hàng sản phẩm.
 
 ### Câu 3. Flexbox được sử dụng ở đâu
 
@@ -66,10 +67,17 @@ Các `grid-template-columns`, `grid-template-areas` và khai báo `grid-area` s�
 
 ### Câu 7. Một đề xuất AI đã kiểm tra hoặc điều chỉnh
 
-Đề xuất là đồng bộ trạng thái hover và focus bàn phím trên liên kết sản phẩm. Mã được cập nhật trong `css/style.css`; sau đó dùng Tab để đến liên kết đầu tiên, quan sát nền và viền focus, rồi nhấn Enter để kiểm tra trang đích. Cách này kiểm tra cả phản hồi trực quan lẫn thao tác bàn phím.
+Đề xuất là đồng bộ trạng thái hover và focus bàn phím, đồng thời chuyển màu viền cùng lúc với nền và chữ. Mã được cập nhật trong `css/style.css`; sau đó dùng chuột và Tab để kiểm tra phản hồi trực quan, rồi nhấn Enter để kiểm tra trang đích.
+
+### Câu hỏi tự kiểm tra bổ sung trong đề
+
+- `nav` dùng để đánh dấu một nhóm liên kết điều hướng chính; trang này không có menu nhiều mục nên không cần thêm `nav` rỗng.
+- `article` có ngữ nghĩa là một nội dung độc lập có thể đứng riêng; `div` chỉ là vùng nhóm trung tính. Mỗi kết quả sản phẩm phù hợp với `article`.
+- Dùng `ul` và `li` khi các mục cùng loại tạo thành một danh sách; bốn kết quả tìm kiếm đang dùng cấu trúc này.
+- `display: flex` đặt trên phần tử cha để sắp xếp các phần tử con. `justify-content: space-between` đẩy mục đầu/cuối ra hai đầu và chia khoảng trống còn lại giữa các mục.
+- `gap` tạo khoảng cách giữa các phần tử con trong Flexbox; `margin` thuộc về từng phần tử và có thể tạo khoảng trống cả ở phía ngoài nhóm.
+- `:hover` phản hồi khi con trỏ chuột ở trên phần tử; `:focus-visible` báo vị trí đang được chọn khi điều hướng bằng bàn phím.
 
 ## 6. Cách chạy và tự kiểm tra
 
-Mở `index.html` bằng trình duyệt. Dùng chuột di chuyển lên nút “Xem chi tiết”, sau đó nhấn Tab đến liên kết để so sánh hai trạng thái. Nhấn Enter để mở trang sản phẩm. Thay đổi chiều rộng cửa sổ để quan sát các quy tắc `@media` ở 899 px và 559 px.
-
-Ảnh trước/sau cần được chụp từ cùng trình duyệt và cùng kích thước hiển thị để đối chiếu công bằng. Khi nộp, lưu ảnh vào repository và cập nhật đường dẫn ảnh trong README nếu cần.
+Mở `index.html` bằng trình duyệt. Dùng chuột di chuyển lên nút “Xem chi tiết”, sau đó nhấn Tab đến liên kết để so sánh hover và focus. Nhấn Enter để mở trang sản phẩm. Có thể xem các ảnh 1366, 768 và 390 px trong thư mục `screenshots/` để đối chiếu breakpoint 899 px và 559 px.

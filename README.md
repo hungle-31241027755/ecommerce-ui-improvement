@@ -38,11 +38,16 @@ Tải dự án về, giải nén nếu cần và mở `index.html` bằng trình
 ├── NGUON_ANH.md
 ├── css/
 │   └── style.css
-└── images/
-    ├── tay-trang-bi-dao.jpg
-    ├── gel-rua-mat-bi-dao.jpg
-    ├── mat-na-bi-dao.jpg
-    └── nuoc-can-bang-bi-dao.jpg
+├── images/
+│   ├── tay-trang-bi-dao.jpg
+│   ├── gel-rua-mat-bi-dao.jpg
+│   ├── mat-na-bi-dao.jpg
+│   └── nuoc-can-bang-bi-dao.jpg
+└── screenshots/
+    ├── before-1366.png
+    ├── after-1366.png
+    ├── responsive-768.png
+    └── responsive-390.png
 ```
 
 ## 6. Cải tiến đã thực hiện
@@ -62,3 +67,18 @@ AI hỗ trợ hệ thống hóa phân tích, đề xuất bố cục, tạo và 
 ## 8. Bài tập Buổi 2
 
 Buổi 2 tiếp tục dùng trang kết quả tìm kiếm từ Buổi 1 để ôn HTML5 có ngữ nghĩa, CSS selector, Box Model, Flexbox, CSS Grid và trạng thái tương tác. Bản cập nhật đồng bộ trạng thái hover và focus bàn phím trên liên kết “Xem chi tiết”; phần giải thích, câu trả lời kiến thức và ghi nhận kiểm thử nằm trong [báo cáo Buổi 2](BAO_CAO_BUOI_2.md).
+
+## 9. Ảnh minh chứng Buổi 2
+
+Ảnh trước và sau dùng cùng viewport 1366 × 1100 px; liên kết sản phẩm đầu tiên đang được focus để thấy rõ thay đổi.
+
+| Trước | Sau |
+| --- | --- |
+| ![Trước khi đồng bộ focus với hover](screenshots/before-1366.png) | ![Sau khi đồng bộ focus với hover](screenshots/after-1366.png) |
+
+Ảnh kiểm tra responsive ở [768 px](screenshots/responsive-768.png) và [390 px](screenshots/responsive-390.png). Cả hai kích thước đều hiển thị đủ bốn ảnh và không tràn ngang.
+
+## 10. Repository và bản chạy
+
+- Repository: [ihcgnuh/ecommerce-ui-improvement](https://github.com/ihcgnuh/ecommerce-ui-improvement).
+- Bản demo trực tuyến: chưa có đường dẫn được cung cấp; mở `index.html` để chạy tại máy.
